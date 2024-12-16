@@ -3,6 +3,7 @@ import { useContext } from 'react'
 import { cartItems } from '../App'
 
 const Product = () => {
+  console.log(window.location)
   
   const{product}=useContext(cartItems)
     // console.log(product)
@@ -15,18 +16,19 @@ const Product = () => {
           backgroundColor:"whitesmoke",
           padding:"50px",
           borderRadius:"50px",
+          color:"black"
         }
       }>
-        <h1>{product?product.title:<></>}</h1>
-        <h6>{product.category}</h6>
+        <h1 style={{color:"black"}}>{product?product.title:<></>}</h1>
+        <h6 style={{color:"black"}}>{product.category}</h6>
         <div style={{display:"flex",gap:"20px"}}>
           <img  src={product.image} height={100} width={100} alt="" />
-          <h4>{product.description}</h4>
+          <h4 style={{color:"black"}}>{product.description}</h4>
 
           
   
         </div>
-        <p>Rating:{product.rating.rate}</p>
+        <p  style={{color:"black"}}>Rating:{product.rating.rate}</p>
         
           
         
